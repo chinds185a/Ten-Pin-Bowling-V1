@@ -42,6 +42,7 @@ session_start();
 <?php
 		}// close if
 		
+        // check player names have been set and loop through the array
 		if (isset($_POST['playerSubmit'])) {
 			
 			$players = array();
@@ -63,13 +64,13 @@ session_start();
             <!-- Form to enter players score-->
             <form method="post" action="">
 <?php
-			$i = 0;
+			$i = 0; // variable counting through number of players
 			while($i < $_SESSION['numberOfPlayers']){
 
 				echo '<fieldset>';
 				echo '<h3>' . $players[$i] . '</h3>';
                 
-				$x=1;
+				$x=1; // variable counting the number of throws
                 // loop the form 21 times for  maximum of 21 throws
 				while($x <= 21){
 ?>
