@@ -53,10 +53,10 @@ session_start();
 			$_SESSION['players'] = $players;
 		}
 
-		//Check player name have been submitted
+		//Check player names have been submitted
 		if(isset($_POST['playerSubmit'])) {
             
-            //create global variable of players array
+            //create variable of players array
 			$players = $_SESSION['players'];
 ?>
             
